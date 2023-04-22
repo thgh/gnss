@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Layout */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+/* Typography */
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.2em 0.5em;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: inherit;
+  background-color: hsla(0, 0%, 50%, 0.4);
+  cursor: pointer;
+  transition: background-color 0.15s, box-shadow 0.25s;
+}
+button:disabled {
+  background: #222;
+}
+button:not(:disabled):hover {
+  z-index: 1;
+  box-shadow: 0 0 0 1px hsla(180, 100%, 80%, 0.4);
+  background: hsla(180, 50%, 20%, 1);
+}
+button:not(:disabled):focus-visible {
+  outline: none;
+  z-index: 1;
+  box-shadow: 0 0 0 4px hsla(180, 70%, 50%, 0.7);
+}
+
+.button-group {
+  display: flex;
+  gap: 1px;
+  background-color: hsla(0, 0%, 50%, 0.4);
+  border-radius: 8px;
+}
+button.active,
+.button-group.active {
+  background-color: hsla(180, 70%, 50%, 0.7);
+}
+
+.button-group button {
+  background: none;
+}
+.button-group button:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.button-group button:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* Form */
+
+label {
+  font-size: 14px;
+  font-weight: 500;
+}
